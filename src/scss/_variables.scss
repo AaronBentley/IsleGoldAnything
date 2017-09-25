@@ -1,0 +1,18 @@
+// Variables
+
+// Gray and Brand Colors for use across theme
+
+$platinum:	#E5E4E2;
+$gold:		#C39738;
+$silver:	#B3B6AF;
+$bronze: 	#F58E4B;
+
+// $theme-primary: #F05F40;
+$theme-primary: $gold;
+
+$gray-base: #333 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default;
+$gray-dark: lighten($gray-base, 20%) !default;
+$gray: lighten($gray-base, 33.5%) !default;
+$gray-light: lighten($gray-base, 46.7%) !default;
+$gray-lighter: lighten($gray-base, 93.5%) !default;

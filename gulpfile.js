@@ -13,7 +13,25 @@ const gutil = require('gulp-util')
 
 
 // Default task
-gulp.task('default', ['message', 'haml', 'sass', 'javascript', 'imageMin', 'watch', 'webserver'])
+gulp.task('default', ['message', 'copy-node-packages', 'haml', 'sass', 'javascript', 'imageMin', 'watch', 'webserver'])
+
+// Copy modules from /node_modules/
+gulp.task('copy-node-packages', () => {
+    let assets = [
+        './node_modules/jquery/**',
+        './node_modules/popper.js/**',
+        './node_modules/bootstrap/**',
+        './node_modules/jquery.easing/**',
+        './node_modules/scrollreveal/**',
+        './node_modules/magnific-popup/**',
+        './node_modules/font-awesome/**'
+    ]
+
+    assets.forEach((asset) => {
+        gulp.src(asset, { base: './node_modules/' })
+            .pipe(gulp.dest('./dist/lib/'))
+    })
+})
 
 // Watch source files for changes
 gulp.task('watch', () => {
@@ -42,7 +60,7 @@ gulp.task('sass', () => {
         .pipe(sass({
             includePaths: [
                 'node_modules/bootstrap/scss',
-                'node_modules/font-awesome/scss'
+                // 'node_modules/font-awesome/scss'
             ]
         }).on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'))
@@ -70,7 +88,7 @@ gulp.task('javascript', () => {
 
 // Optimize images
 gulp.task('imageMin', () =>
-    gulp.src('src/img/*')
+    gulp.src('src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img/'))
 )

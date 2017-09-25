@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronBentley/IsleGoldAnything.git"
+  },
   "author": "Aaron Bentley",
   "license": "ISC",
   "devDependencies": {
@@ -29,7 +33,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.5"
+    "jquery.easing": "^1.4.1",
+    "magnific-popup": "^1.1.0",
+    "popper.js": "^1.12.5",
+    "scrollreveal": "^3.3.6"
   }
 }
