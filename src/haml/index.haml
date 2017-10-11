@@ -37,9 +37,9 @@
         %header.masthead
             .header-content
                 .header-content-inner
-                    %h1#homeHeading Your Favorite Source of Free Bootstrap Themes
+                    %h1#homeHeading Custom electroplating services
                     %hr
-                    %p Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!
+                    %p We specialise in luxury personalised items & giftware including 24k gold vehicle badging, iPhones and more!
                     %a.btn.btn-primary.btn-xl.js-scroll-trigger{href: "#about"} Find Out More
 
         %section.bg-primary#about
@@ -61,24 +61,23 @@
                 .row
                     .col-lg-3.col-md-6.text-center
                         .service-box
-                            %i.fa.fa-4x.fa-diamond.text-primary.sr-icons
-                            %h3 Sturdy Templates
+                            %i.fa.fa-4x.fa-suitcase.text-primary.sr-icons
+                            %h3 Professional
                             %p.text-muted Our templates are updated regularly so they don"t break.
                     .col-lg-3.col-md-6.text-center
                         .service-box
-                            %i.fa.fa-4x.fa-paper-plane.text-primary.sr-icons
-                            %h3 Ready to Ship
+                            %i.fa.fa-4x.fa-map-marker.text-primary.sr-icons
+                            %h3 Mobile
                             %p.text-muted You can use this theme as is, or you can make changes!
                     .col-lg-3.col-md-6.text-center
                         .service-box
-                            %i.fa.fa-4x.fa-newspaper-o.text-primary.sr-icons
-                            %h3 Up to Date
+                            %i.fa.fa-4x.fa-car.text-primary.sr-icons
+                            %h3 Bespoke
                             %p.text-muted We update dependencies to keep things fresh
-
                     .col-lg-3.col-md-6.text-center
                         .service-box
-                            %i.fa.fa-4x.fa-heart.text-primary.sr-icons
-                            %h3 Made with Love
+                            %i.fa.fa-4x.fa-star.text-primary.sr-icons
+                            %h3 Guaranteed
                             %p.text-muted You have to make your websites with love these days!
         
         %section.p-0#portfolio
@@ -144,6 +143,10 @@
                 %h2 Free Download at Start Bootstrap!
                 %a.btn.btn-default.btn-xl.sr-button{href:"http://startbootstrap.com/template-overviews/creative/"} Download Now!
 
+        -# %section.p-0
+        -#     .container-fluid
+        -#         .row.no-gutter.instagram
+
         %section#contact
             .container
                 .row
@@ -152,13 +155,18 @@
                         %hr.primary
                         %p Ready to start your next project with us? That"s great! Give us a call or send us an email and we will get back to you as soon as possible!
                 .row
-                    .col-lg-4.ml-auto.text-center
-                        %i.fa.fa-phone.fa-3x.sr-contact
-                        %p 123-456-6789
-                    .col-lg-4.mr-auto.text-center
-                        %i.fa.fa-envelope-o.fa-3x.sr-contact
-                        %p
-                            %a{href: "mailto:your-email@your-domain.com"} feedback@startbootstrap.com
+                    .col-lg-3.ml-auto.pt-3.text-center
+                        %a{href: "tel:+44-123-456-789"}
+                            %i.fa.fa-phone.fa-3x.sr-contact
+                    .col-lg-3.mr-auto.pt-3.text-center
+                        %a{href: "mailto:your-email@domain.com"} 
+                            %i.fa.fa-envelope-o.fa-3x.sr-contact
+                    .col-lg-3.ml-auto.pt-3.text-center
+                        %a{href: "https://www.facebook.com"}
+                            %i.fa.fa-facebook.fa-3x.sr-contact
+                    .col-lg-3.mr-auto.pt-3.text-center
+                        %a{href: "https://www.twitter.com"}
+                            %i.fa.fa-twitter.fa-3x.sr-contact
         -# JS
         %script{src: "lib/jquery/dist/jquery.min.js"}
         %script{src: "lib/popper.js/dist/umd/popper.min.js"}
@@ -166,4 +174,5 @@
         %script{src: "lib/jquery.easing/jquery.easing.min.js"}
         %script{src: "lib/scrollreveal/dist/scrollreveal.min.js"}
         %script{src: "lib/magnific-popup/dist/jquery.magnific-popup.min.js"}
+        %script{src: "lib/spectragram/spectragram.js"}
         %script{src: "js/app.js", async: "true"}
