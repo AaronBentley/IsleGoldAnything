@@ -9,7 +9,7 @@ $(document).ready(() => {
     $('html').toggleClass('no-js js')
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
             location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
             location.hostname == this.hostname
@@ -18,7 +18,9 @@ $(document).ready(() => {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
 
             if (target.length) {
-                $('html, body').animate({ scrollTop: target.offset().top - 48 }, 1000, 'easeInOutExpo')
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 48
+                }, 1000, 'easeInOutExpo')
 
                 return false
             }
@@ -26,15 +28,18 @@ $(document).ready(() => {
     })
 
     // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
+    $('.js-scroll-trigger').click(function () {
         $('.navbar-collapse').collapse('hide')
     })
 
     // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({ target: '#mainNav', offset: 48 })
+    $('body').scrollspy({
+        target: '#mainNav',
+        offset: 48
+    })
 
     // Collapse the navbar when page is scrolled
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($('#mainNav').offset().top > 100) {
             $('#mainNav').addClass('navbar-shrink')
         } else {
@@ -44,41 +49,56 @@ $(document).ready(() => {
 
     // Scroll reveal calls
     window.sr = ScrollReveal()
-    sr.reveal('.sr-icons', { duration: 600, scale: 0.3, distance: '0px' }, 200)
-    sr.reveal('.sr-button', { duration: 1000, delay: 200 })
-    sr.reveal('.sr-contact', { duration: 600, scale: 0.3, distance: '0px' }, 300)
+    sr.reveal('.sr-icons', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 200)
+    sr.reveal('.sr-button', {
+        duration: 1000,
+        delay: 200
+    })
+    sr.reveal('.sr-contact', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 300)
 
     // Instagram feed
-    // var Spectra = {
-    //     instaToken: '9700759.a732fca.e265c272ae60468d866b57716c76d167',
-    //     instaID: 'a732fcac5ce041e087136c1053ef9459',
-    //     init: function() {
-    //         $.fn.spectragram.accessData = { accessToken: this.instaToken, clientID: this.instaID }
+    var Spectra = {
+        instaToken: '9700759.a732fca.e265c272ae60468d866b57716c76d167',
+        instaID: 'a732fcac5ce041e087136c1053ef9459',
+        init: function () {
+            $.fn.spectragram.accessData = {
+                accessToken: this.instaToken,
+                clientID: this.instaID
+            }
 
-    //         $('.instagram').spectragram('getUserFeed', {
-    //             max: 6,
-    //             size: 'big',
-    //             query: 'aaronbentley',
-    //             wrapEachWith: '<div class="col-4 instagram-item"></div>'
-    //         })
-    //     }
-    // }
+            $('.instagram').spectragram('getUserFeed', {
+                max: 6,
+                size: 'big',
+                query: 'iowgold',
+                // wrapEachWith: '<div class="col-4 instagram-item"></div>'
+                wrapEachWith: '<div class="card instagram-item"></div>'
+            })
+        }
+    }
 
-    // Spectra.init()
+    Spectra.init()
 
     // Magnific popup calls
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        }
-    })
+    // $('.popup-gallery').magnificPopup({
+    //     delegate: 'a',
+    //     type: 'image',
+    //     tLoading: 'Loading image #%curr%...',
+    //     mainClass: 'mfp-img-mobile',
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0, 1]
+    //     },
+    //     image: {
+    //         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    //     }
+    // })
 })
