@@ -29,7 +29,9 @@ gulp.task('copy-node-packages', () => {
     ]
 
     assets.forEach(asset => {
-        gulp.src(asset, { base: './node_modules/' }).pipe(gulp.dest('./dist/lib/'))
+        gulp.src(asset, {
+            base: './node_modules/'
+        }).pipe(gulp.dest('./dist/lib/'))
     })
 })
 
@@ -81,24 +83,26 @@ gulp.task('javascript', () => {
 
     return (
         b
-            .bundle()
-            .pipe(source('app.js'))
-            .pipe(buffer())
-            .pipe(sourcemaps.init({ loadMaps: true }))
-            // Add transformation tasks to the pipeline here.
-            .pipe(uglify())
-            .on('error', gutil.log)
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./dist/js/'))
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        }))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on('error', gutil.log)
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./dist/js/'))
     )
 })
 
 // Optimize images
 gulp.task('imageMin', () =>
     gulp
-        .src('src/img/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img/'))
+    .src('src/img/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img/'))
 )
 
 // Launch webserver

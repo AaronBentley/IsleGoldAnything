@@ -75,11 +75,11 @@ $(document).ready(() => {
             }
 
             $('.instagram').spectragram('getUserFeed', {
-                max: 6,
+                max: 12,
                 size: 'big',
                 query: 'iowgold',
                 // wrapEachWith: '<div class="col-4 instagram-item"></div>'
-                wrapEachWith: '<div class="card instagram-item"></div>'
+                wrapEachWith: '<div class="card col-2 instagram-item"></div>'
             })
         }
     }
