@@ -10,6 +10,7 @@ const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const sourcemaps = require('gulp-sourcemaps')
 const gutil = require('gulp-util')
+const ghpages = require('gulp-gh-pages')
 
 // Default task
 gulp.task('default', ['message', 'copy-node-packages', 'haml', 'sass', 'javascript', 'imageMin', 'watch', 'webserver'])
@@ -65,7 +66,6 @@ gulp.task('sass', () => {
             sass({
                 includePaths: [
                     'node_modules/bootstrap/scss'
-                    // 'node_modules/font-awesome/scss'
                 ]
             }).on('error', sass.logError)
         )
@@ -114,4 +114,10 @@ gulp.task('webserver', () => {
             open: true
         })
     )
+})
+
+// Deploy to gh-pages
+gulp.task('deploy', () => {
+    gulp.src('./dist/**/*')
+        .pipe(ghpages())
 })
