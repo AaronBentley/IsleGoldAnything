@@ -1,35 +1,16 @@
-// .instagram-item {
-//     position: relative;
-//     width: 650px;
-//     height: 350px;
-//     a {
-//         img {
-//             // position: absolute;
-//             // margin: auto;
-//             // top: 0;
-//             // right: 0;
-//             // left: 0;
-//             // bottom: 0;
-//             // max-height: 100%;
-//         }
-//     }
-// }
-// .Container-of-the-image {
-//     position: relative;
-//     /*the rest of your classes to make it square*/
-// }
-// .Container-of-the-image img {
-//     position: absolute;
-//     margin: auto;
-//     top: 0;
-//     right: 0;
-//     left: 0;
-//     bottom: 0;
-//     max-height: 100%;
-//     max-width: 100%;
-// }
-.instagram {
-    .instragram-item {
-        @include image-fluid;
+.spectragram {
+    background-color: $gray-base;
+    .spectragram-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        a {
+            img {
+                flex-shrink: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
     }
 }

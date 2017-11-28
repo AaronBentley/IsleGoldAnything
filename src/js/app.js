@@ -74,31 +74,14 @@ $(document).ready(() => {
                 clientID: this.instaID
             }
 
-            $('.instagram').spectragram('getUserFeed', {
+            $('.spectragram').spectragram('getUserFeed', {
                 max: 12,
                 size: 'big',
                 query: 'iowgold',
-                // wrapEachWith: '<div class="col-4 instagram-item"></div>'
-                wrapEachWith: '<div class="card col-2 instagram-item"></div>'
+                wrapEachWith: '<div class="col-sm-6 col-md-4 col-lg-3 spectragram-item"></div>'
             })
         }
     }
 
     Spectra.init()
-
-    // Magnific popup calls
-    // $('.popup-gallery').magnificPopup({
-    //     delegate: 'a',
-    //     type: 'image',
-    //     tLoading: 'Loading image #%curr%...',
-    //     mainClass: 'mfp-img-mobile',
-    //     gallery: {
-    //         enabled: true,
-    //         navigateByImgClick: true,
-    //         preload: [0, 1]
-    //     },
-    //     image: {
-    //         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    //     }
-    // })
 })

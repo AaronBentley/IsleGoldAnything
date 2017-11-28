@@ -145,7 +145,7 @@ header.masthead {
   min-height: auto;
   text-align: center;
   color: white;
-  background-image: url("../img/Bentley-Badge.jpg");
+  background-image: url("../img/gold-dust.jpg");
   background-position: center;
   position: relative;
   z-index: 1;
@@ -161,8 +161,7 @@ header.masthead {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #333;
-    opacity: 0.65; }
+    opacity: 0.15; }
   header.masthead > * {
     position: relative;
     z-index: 3; }
@@ -356,3 +355,15 @@ header.masthead {
 
 .btn-xl {
   padding: 15px 30px; }
+
+.spectragram {
+  background-color: #333; }
+  .spectragram .spectragram-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    .spectragram .spectragram-item a img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%; }
