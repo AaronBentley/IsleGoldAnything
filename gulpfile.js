@@ -10,7 +10,7 @@ const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const sourcemaps = require('gulp-sourcemaps')
 const gutil = require('gulp-util')
-const ghpages = require('gulp-gh-pages')
+// const ghpages = require('gulp-gh-pages')
 
 // Default task
 gulp.task('default', ['message', 'copy-node-packages', 'haml', 'sass', 'javascript', 'imageMin', 'watch', 'webserver'])
@@ -23,8 +23,6 @@ gulp.task('copy-node-packages', () => {
         './node_modules/bootstrap/**',
         './node_modules/jquery.easing/**',
         './node_modules/scrollreveal/**',
-        './node_modules/magnific-popup/**',
-        '!./node_modules/magnific-popup/website/**',
         './node_modules/font-awesome/**',
         './node_modules/spectragram/**'
     ]
@@ -117,7 +115,7 @@ gulp.task('webserver', () => {
 })
 
 // Deploy to gh-pages
-gulp.task('deploy', () => {
-    gulp.src('./dist/**/*')
-        .pipe(ghpages())
-})
+// gulp.task('deploy', () => {
+//     gulp.src('./dist/**/*')
+//         .pipe(ghpages())
+// })
