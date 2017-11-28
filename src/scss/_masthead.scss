@@ -30,6 +30,11 @@ header.masthead {
         padding: 150px 15px 100px;
         text-align: center;
         .header-content-inner {
+            svg#logo {
+                width: 70%;
+                height: auto;
+                margin: 10% 0;
+            }
             h1 {
                 font-size: 30px;
                 font-weight: 700;
