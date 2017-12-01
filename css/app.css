@@ -145,7 +145,8 @@ header.masthead {
   min-height: auto;
   text-align: center;
   color: white;
-  background-image: url("../img/gold-dust.jpg");
+  background-image: url("../img/gold-particles-full.jpg");
+  background-color: #333;
   background-position: center;
   position: relative;
   z-index: 1;
@@ -160,8 +161,7 @@ header.masthead {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
-    opacity: 0.15; }
+    left: 0; }
   header.masthead > * {
     position: relative;
     z-index: 3; }
@@ -183,11 +183,13 @@ header.masthead {
       color: #d5af2b; }
     header.masthead .header-content .header-content-inner hr {
       margin: 30px auto; }
-    header.masthead .header-content .header-content-inner p {
-      font-size: 16px;
+    header.masthead .header-content .header-content-inner h2 {
       font-weight: 300;
       margin-bottom: 50px;
-      color: rgba(255, 255, 255, 0.7); }
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85); }
   @media (min-width: 768px) {
     header.masthead {
       height: 100%;
