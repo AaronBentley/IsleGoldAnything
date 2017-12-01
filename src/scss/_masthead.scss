@@ -4,11 +4,8 @@ header.masthead {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: white; // background-image: url('../img/gold-dust.jpg');
-    // background-image: url('../img/gold-flakey-top.jpg');
-    // background-image: url('../img/gold-particles.jpg');
-    // background-image: url('../img/gold-particles-flip.jpg');
-    background-image: url('../img/gold-particles-full.jpg');
+    color: white;
+    background-image: url('../img/gold-particles-crop.jpg');
     background-color: #333;
     background-position: center;
     position: relative;
@@ -20,8 +17,7 @@ header.masthead {
         width: 100%;
         height: 100%;
         top: 0;
-        left: 0; // background-color: #333;
-        // opacity: 0.25;
+        left: 0;
     }
     >* {
         position: relative;
