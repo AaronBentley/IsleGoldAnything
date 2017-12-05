@@ -6,9 +6,28 @@
         %meta{author: "Isle Gold Anything"}
         %title
             Isle Gold Anything
+        %meta{ name: "description", content: "Isle Gold Anything delivers portable gold plating solutions, ranging from bathroom faucets, to vehicle badges & emblems."}
+        %meta{name: "robots", content: "index, follow"}
+        %meta{name: "author", content: "IsleGoldAnything.co.uk"}
+        
         -# Favicon
         -# %link{"href" => "/assets/img/favicon.png", "rel" => "shortcut icon"}
+
+        -# Facebook OpenGraph
+        %meta{content: "IsleGoldAnything", property: "og:title"}
+        %meta{content: "IsleGoldAnything.co.uk", property: "og:site_name"}
+        %meta{content: "http://www.islegoldanything.co.uk", property: "og:url"}
+        %meta{content: "Isle Gold Anything delivers portable gold plating solutions, ranging from bathroom faucets, to vehicle badges  emblems.", property: "og:description"}
+        %meta{content: "business.business", property: "og:type"}
+        %meta{content: "http://www.islegoldanything.co.uk/img/open-graph-image.png", property: "og:image"}
         
+        -# Twitter meta
+        %meta{name: "twitter:card", content: "summary_large_image"}
+        %meta{name: "twitter:site", content: "@iowgold"}
+        %meta{name: "twitter:title", content: "IsleGoldAnything"}
+        %meta{name:"twitter:description", content: "Isle Gold Anything delivers portable gold plating solutions, ranging from bathroom faucets, to vehicle badges & emblems."}
+        %meta{name: "twitter:image", content: "http://www.islegoldanything.co.uk/img/open-graph-image.png"}
+
         -# CSS
         %link{href: "lib/bootstrap/dist/css/bootstrap.min.css", rel: "stylesheet"}
         %link{href: "lib/font-awesome/css/font-awesome.min.css", rel: "stylesheet"}
@@ -49,7 +68,7 @@
                     .col-lg-8.mx-auto.text-center
                         %h2.section-heading.text-white We've got what you need
                         %hr.light
-                        %p.text-fadedStart Isle Gold Anything delivers portable gold plating solutions, ranging from bathroom fossets, to vehicle badges & emblems.
+                        %p.text-fadedStart Isle Gold Anything delivers portable gold plating solutions, ranging from bathroom faucets, to vehicle badges & emblems.
                         %a.btn.btn-default.btn-xl.js-scroll-trigger{href: "#services"} Get Started!
 
         %section#services
